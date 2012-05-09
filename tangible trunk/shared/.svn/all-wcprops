@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/tangible/!svn/ver/69/trunk/shared
+END
+TRTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/tangible/!svn/ver/56/trunk/shared/TRTypes.h
+END
+TRRecognizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tangible/!svn/ver/70/trunk/shared/TRRecognizer.h
+END
+TangibleRecognizer.i
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tangible/!svn/ver/76/trunk/shared/TangibleRecognizer.i
+END
+TRMath.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/tangible/!svn/ver/59/trunk/shared/TRMath.h
+END
+TRGraph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tangible/!svn/ver/69/trunk/shared/TRGraph.cpp
+END
+TRTouch.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tangible/!svn/ver/92/trunk/shared/TRTouch.cpp
+END
+TRDeclare.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tangible/!svn/ver/74/trunk/shared/TRDeclare.h
+END
+TRGraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/tangible/!svn/ver/69/trunk/shared/TRGraph.h
+END
+TRRecognizer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/tangible/!svn/ver/78/trunk/shared/TRRecognizer.cpp
+END
+TRTouch.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/tangible/!svn/ver/92/trunk/shared/TRTouch.h
+END

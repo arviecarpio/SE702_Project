@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tangible/!svn/ver/69/trunk/ios/TangibleLearning/TangibleLearning
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/main.m
+END
+LearningView.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/LearningView.h
+END
+SketchPaper.mm
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tangible/!svn/ver/101/trunk/ios/TangibleLearning/TangibleLearning/SketchPaper.mm
+END
+TangibleObject.mm
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tangible/!svn/ver/86/trunk/ios/TangibleLearning/TangibleLearning/TangibleObject.mm
+END
+LearningView.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/LearningView.m
+END
+TangibleRecognizer.mm
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/TangibleRecognizer.mm
+END
+TangibleLearning-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tangible/!svn/ver/70/trunk/ios/TangibleLearning/TangibleLearning/TangibleLearning-Info.plist
+END
+PaintingView.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/85/trunk/ios/TangibleLearning/TangibleLearning/PaintingView.h
+END
+RecordViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/tangible/!svn/ver/80/trunk/ios/TangibleLearning/TangibleLearning/RecordViewController.xib
+END
+SketchPaper.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/101/trunk/ios/TangibleLearning/TangibleLearning/SketchPaper.h
+END
+PaintingView.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/74/trunk/ios/TangibleLearning/TangibleLearning/PaintingView.m
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/AppDelegate.h
+END
+TangibleObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/tangible/!svn/ver/86/trunk/ios/TangibleLearning/TangibleLearning/TangibleObject.h
+END
+TangibleRecognizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/TangibleRecognizer.h
+END
+MyWindow.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/MyWindow.h
+END
+RecordViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tangible/!svn/ver/86/trunk/ios/TangibleLearning/TangibleLearning/RecordViewController.h
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/ViewController.h
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/tangible/!svn/ver/64/trunk/ios/TangibleLearning/TangibleLearning/AppDelegate.m
+END
+TangibleView.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/TangibleView.h
+END
+MyWindow.m
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/MyWindow.m
+END
+RecordViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/tangible/!svn/ver/87/trunk/ios/TangibleLearning/TangibleLearning/RecordViewController.m
+END
+TangibleLearning-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/tangible/!svn/ver/56/trunk/ios/TangibleLearning/TangibleLearning/TangibleLearning-Prefix.pch
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/tangible/!svn/ver/103/trunk/ios/TangibleLearning/TangibleLearning/ViewController.m
+END
+TangibleView.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/tangible/!svn/ver/100/trunk/ios/TangibleLearning/TangibleLearning/TangibleView.m
+END

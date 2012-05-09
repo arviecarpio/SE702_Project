@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/main.m
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/AppDelegate.h
+END
+TangibleRecognizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/TangibleRecognizer.h
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/ViewController.h
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/AppDelegate.m
+END
+TriangleView.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/TriangleView.h
+END
+TangibleRecognizer.m
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/TangibleRecognizer.m
+END
+tangible-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/tangible-Info.plist
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/ViewController.m
+END
+tangible-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/tangible-Prefix.pch
+END
+TriangleView.m
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/tangible/!svn/ver/56/trunk/ios/tangible/tangible/TriangleView.m
+END

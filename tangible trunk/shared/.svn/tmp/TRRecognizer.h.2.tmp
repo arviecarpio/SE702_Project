@@ -1,0 +1,112 @@
+//
+//  TRRecognizer.h
+//  TangibleLearning
+//
+//  Created by standarduser on 12/20/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//
+
+#ifndef TangibleLearning_TRRecognizer_h
+#define TangibleLearning_TRRecognizer_h
+
+#include <map>
+#include <set>
+
+#include "TRTypes.h"
+#include "TRGraph.h"
+#include "TRTouch.h"
+
+class TRTangibleObject {
+    TRGraph graph;
+    TRIdentifier identifier;
+    std::map<TRIdentifier, int> recognizedIndex;
+    bool recognized;
+    float rotation;
+    TRPoint translation;
+    
+public:
+    TRTangibleObject() :graph(vector<TRPoint>()) { }
+    TRTangibleObject(TRIdentifier i, TRGraph g) :graph(g), identifier(i) {}
+    
+    bool isRecognized() const { return recognized; }
+    bool isFullyRecognized() const { return recognized && recognizedIndex.size() == graph.getPoints().size(); }
+    float getRotation() const { return rotation; }
+    TRPoint getTranslation() const { return translation; }
+    TRIdentifier getIdentifier() const { return identifier; }
+    std::map<TRIdentifier, int> getRecognizedIndex() const { return recognizedIndex; }
+    
+    bool recognize(TRTouchSet &touches);
+    bool update(TRTouchSet &touches);
+    void touchRemoved(TRIdentifier i);
+    void reset();
+};
+
+class TRRecognizer {
+    std::map<TRIdentifier, TRTangibleObject> tangibles;
+    std::set<TRTangibleObject *> recognizedObjects;
+    TRTouchSet touchSet;
+    set<TRIdentifier> ignoredTouches;
+    
+    void ignoreTouch(TRIdentifier identifier);
+    
+public:
+    TRRecognizer() {}
+    
+    void addTangibleObject(const TRTangibleObject &obj) { tangibles[obj.getIdentifier()] = obj; }
+    void removeAllTangibles() { tangibles.clear(); }
+    const std::map<TRIdentifier, TRTangibleObject> & getTangibles() { return tangibles; }
+    std::vector<TRIdentifier> getRecognizedObject();
+    std::set<TRIdentifier> & getIgnoredTouches() { return ignoredTouches; }
+    const TRTouchSet & getTouches() const { return touchSet; }
+    const TRTangibleObject & getTangibleObjectForId(TRIdentifier identifier) const;
+    
+    void reset();
+    
+    void touchBegan(TRIdentifier identifier, TRPoint p);
+    void touchMoved(TRIdentifier identifier, TRPoint p);
+    void touchEnded(TRIdentifier identifier, TRPoint p);
+    
+    void touchesBegan(std::map<TRIdentifier, TRPoint> &touches);
+    void touchesMoved(std::map<TRIdentifier, TRPoint> &touches);
+    void touchesEnded(std::map<TRIdentifier, TRPoint> &touches);
+    
+#if defined (__APPLE__) && defined (__OBJC__)
+    void touchesBegan(NSSet *touches) {
+        std::map<TRIdentifier, TRPoint> map;
+        for (UITouch *touch in touches) {
+            CGPoint p = [touch locationInView:touch.window];
+            float y = p.y;
+            p.y = 768 - p.x;
+            p.x = y;
+            CGPoint p2 = [touch locationInView:touch.view];
+            map[TRIdentifierFromObject(touch)] = p;
+        }
+        touchesBegan(map);
+    }
+    void touchesMoved(NSSet *touches) {
+        std::map<TRIdentifier, TRPoint> map;
+        for (UITouch *touch in touches) {
+            CGPoint p = [touch locationInView:touch.window];
+            float y = p.y;
+            p.y = 768 - p.x;
+            p.x = y;
+            CGPoint p2 = [touch locationInView:touch.view];
+            map[TRIdentifierFromObject(touch)] = p;
+        }
+        touchesMoved(map);
+    }
+    void touchesEnded(NSSet *touches) {
+        std::map<TRIdentifier, TRPoint> map;
+        for (UITouch *touch in touches) {
+            CGPoint p = [touch locationInView:touch.window];
+            float y = p.y;
+            p.y = 768 - p.x;
+            p.x = y;
+            map[TRIdentifierFromObject(touch)] = p;
+        }
+        touchesEnded(map);
+    }
+#endif
+};
+
+#endif

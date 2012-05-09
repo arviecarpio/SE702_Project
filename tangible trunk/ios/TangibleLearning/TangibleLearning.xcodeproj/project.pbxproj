@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4406B1451490578D0098E320 /* SketchPaper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4406B1441490578D0098E320 /* SketchPaper.mm */; };
+		4406B14D14906C990098E320 /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = 4406B14A14906C990098E320 /* b.png */; };
+		4406B14E14906C990098E320 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 4406B14B14906C990098E320 /* paper.png */; };
+		4406B14F14906C990098E320 /* d.png in Resources */ = {isa = PBXBuildFile; fileRef = 4406B14C14906C990098E320 /* d.png */; };
+		44236EA6148C4A7100AF0328 /* LearningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44236EA5148C4A7100AF0328 /* LearningView.m */; };
+		44236EAE148C691600AF0328 /* TangibleObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44236EAD148C691600AF0328 /* TangibleObject.mm */; };
+		442CB1821495A6FA009E1913 /* TRGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 679758A514955DEE00D7D9AE /* TRGraph.cpp */; };
+		444F904F149FFEFE0066DF16 /* TRRecognizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444F904E149FFEFE0066DF16 /* TRRecognizer.cpp */; };
+		444F905314A01A2F0066DF16 /* TRTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 444F905214A01A2F0066DF16 /* TRTouch.cpp */; };
+		445BB6C714C641F800A4FB94 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 445BB6C614C641F800A4FB94 /* MyWindow.m */; };
+		4466804814D1033B001879C3 /* Particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4466804714D1033B001879C3 /* Particle.png */; };
+		4485E9DC14CE32D700EED9E4 /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4485E9DA14CE32D700EED9E4 /* RecordViewController.m */; };
+		4485E9DD14CE32D700EED9E4 /* RecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4485E9DB14CE32D700EED9E4 /* RecordViewController.xib */; };
+		44E611DA148D61DC007F3A15 /* TangibleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E611D9148D61DC007F3A15 /* TangibleView.m */; };
+		44E611E6148D6427007F3A15 /* TangibleRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44E611E5148D6427007F3A15 /* TangibleRecognizer.mm */; };
+		44EA8273148C456D00E5D036 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA8272148C456D00E5D036 /* UIKit.framework */; };
+		44EA8275148C456D00E5D036 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA8274148C456D00E5D036 /* Foundation.framework */; };
+		44EA8277148C456D00E5D036 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EA8276148C456D00E5D036 /* CoreGraphics.framework */; };
+		44EA827D148C456D00E5D036 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44EA827B148C456D00E5D036 /* InfoPlist.strings */; };
+		44EA827F148C456D00E5D036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA827E148C456D00E5D036 /* main.m */; };
+		44EA8283148C456D00E5D036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA8282148C456D00E5D036 /* AppDelegate.m */; };
+		44EA8286148C456D00E5D036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EA8285148C456D00E5D036 /* ViewController.m */; };
+		44EA8289148C456D00E5D036 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EA8287148C456D00E5D036 /* ViewController.xib */; };
+		44EE658C14C4D16300C4A903 /* PaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EE658B14C4D16300C4A903 /* PaintingView.m */; };
+		44EE658F14C4D39700C4A903 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EE658E14C4D39700C4A903 /* OpenGLES.framework */; };
+		44EE659114C4D3BD00C4A903 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EE659014C4D3BD00C4A903 /* QuartzCore.framework */; };
+		44EE659314C4D63C00C4A903 /* Particle2.png in Resources */ = {isa = PBXBuildFile; fileRef = 44EE659214C4D63C00C4A903 /* Particle2.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4406B1431490578D0098E320 /* SketchPaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchPaper.h; sourceTree = "<group>"; };
+		4406B1441490578D0098E320 /* SketchPaper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SketchPaper.mm; sourceTree = "<group>"; };
+		4406B14A14906C990098E320 /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
+		4406B14B14906C990098E320 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
+		4406B14C14906C990098E320 /* d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = d.png; sourceTree = "<group>"; };
+		44236EA4148C4A7100AF0328 /* LearningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningView.h; sourceTree = "<group>"; };
+		44236EA5148C4A7100AF0328 /* LearningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningView.m; sourceTree = "<group>"; };
+		44236EAC148C691600AF0328 /* TangibleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangibleObject.h; path = TangibleLearning/TangibleObject.h; sourceTree = "<group>"; };
+		44236EAD148C691600AF0328 /* TangibleObject.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TangibleObject.mm; path = TangibleLearning/TangibleObject.mm; sourceTree = "<group>"; };
+		442CB17B14954EEB009E1913 /* TRGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRGraph.h; path = ../../shared/TRGraph.h; sourceTree = "<group>"; };
+		442CB17C149587AF009E1913 /* TRMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRMath.h; path = ../../shared/TRMath.h; sourceTree = "<group>"; };
+		444F904E149FFEFE0066DF16 /* TRRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TRRecognizer.cpp; path = ../../shared/TRRecognizer.cpp; sourceTree = "<group>"; };
+		444F9051149FFF0C0066DF16 /* TRRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRRecognizer.h; path = ../../shared/TRRecognizer.h; sourceTree = "<group>"; };
+		444F905214A01A2F0066DF16 /* TRTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TRTouch.cpp; path = ../../shared/TRTouch.cpp; sourceTree = "<group>"; };
+		444F905414A01A370066DF16 /* TRTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRTouch.h; path = ../../shared/TRTouch.h; sourceTree = "<group>"; };
+		444F905514A01B230066DF16 /* TRTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRTypes.h; path = ../../shared/TRTypes.h; sourceTree = "<group>"; };
+		445BB6C514C641F800A4FB94 /* MyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindow.h; sourceTree = "<group>"; };
+		445BB6C614C641F800A4FB94 /* MyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindow.m; sourceTree = "<group>"; };
+		4466804714D1033B001879C3 /* Particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle.png; sourceTree = "<group>"; };
+		4485E9D914CE32D700EED9E4 /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordViewController.h; sourceTree = "<group>"; };
+		4485E9DA14CE32D700EED9E4 /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordViewController.m; sourceTree = "<group>"; };
+		4485E9DB14CE32D700EED9E4 /* RecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordViewController.xib; sourceTree = "<group>"; };
+		44AC9FD614A16D000099EF6D /* TRDeclare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TRDeclare.h; path = ../../shared/TRDeclare.h; sourceTree = "<group>"; };
+		44E611D8148D61DC007F3A15 /* TangibleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TangibleView.h; sourceTree = "<group>"; };
+		44E611D9148D61DC007F3A15 /* TangibleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TangibleView.m; sourceTree = "<group>"; };
+		44E611E4148D6427007F3A15 /* TangibleRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TangibleRecognizer.h; path = TangibleLearning/TangibleRecognizer.h; sourceTree = "<group>"; };
+		44E611E5148D6427007F3A15 /* TangibleRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TangibleRecognizer.mm; path = TangibleLearning/TangibleRecognizer.mm; sourceTree = "<group>"; };
+		44EA826E148C456D00E5D036 /* TangibleLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TangibleLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EA8272148C456D00E5D036 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44EA8274148C456D00E5D036 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44EA8276148C456D00E5D036 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44EA827A148C456D00E5D036 /* TangibleLearning-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TangibleLearning-Info.plist"; sourceTree = "<group>"; };
+		44EA827C148C456D00E5D036 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44EA827E148C456D00E5D036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		44EA8280148C456D00E5D036 /* TangibleLearning-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TangibleLearning-Prefix.pch"; sourceTree = "<group>"; };
+		44EA8281148C456D00E5D036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		44EA8282148C456D00E5D036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		44EA8284148C456D00E5D036 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44EA8285148C456D00E5D036 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		44EA8288148C456D00E5D036 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		44EE658A14C4D16300C4A903 /* PaintingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaintingView.h; sourceTree = "<group>"; };
+		44EE658B14C4D16300C4A903 /* PaintingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaintingView.m; sourceTree = "<group>"; };
+		44EE658E14C4D39700C4A903 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		44EE659014C4D3BD00C4A903 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		44EE659214C4D63C00C4A903 /* Particle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Particle2.png; sourceTree = "<group>"; };
+		679758A514955DEE00D7D9AE /* TRGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TRGraph.cpp; path = ../../shared/TRGraph.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44EA826B148C456D00E5D036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EE659114C4D3BD00C4A903 /* QuartzCore.framework in Frameworks */,
+				44EE658F14C4D39700C4A903 /* OpenGLES.framework in Frameworks */,
+				44EA8273148C456D00E5D036 /* UIKit.framework in Frameworks */,
+				44EA8275148C456D00E5D036 /* Foundation.framework in Frameworks */,
+				44EA8277148C456D00E5D036 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44E8A9B014E4915B00095218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44236EA4148C4A7100AF0328 /* LearningView.h */,
+				44236EA5148C4A7100AF0328 /* LearningView.m */,
+				44E611D8148D61DC007F3A15 /* TangibleView.h */,
+				44E611D9148D61DC007F3A15 /* TangibleView.m */,
+				44EE658A14C4D16300C4A903 /* PaintingView.h */,
+				44EE658B14C4D16300C4A903 /* PaintingView.m */,
+				4406B1431490578D0098E320 /* SketchPaper.h */,
+				4406B1441490578D0098E320 /* SketchPaper.mm */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		44EA8263148C456D00E5D036 = {
+			isa = PBXGroup;
+			children = (
+				44EA8278148C456D00E5D036 /* TangibleLearning */,
+				4406B14A14906C990098E320 /* b.png */,
+				4406B14B14906C990098E320 /* paper.png */,
+				4406B14C14906C990098E320 /* d.png */,
+				44EE659214C4D63C00C4A903 /* Particle2.png */,
+				4466804714D1033B001879C3 /* Particle.png */,
+				44EA8271148C456D00E5D036 /* Frameworks */,
+				44EA826F148C456D00E5D036 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44EA826F148C456D00E5D036 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44EA826E148C456D00E5D036 /* TangibleLearning.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44EA8271148C456D00E5D036 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44EE659014C4D3BD00C4A903 /* QuartzCore.framework */,
+				44EE658E14C4D39700C4A903 /* OpenGLES.framework */,
+				44EA8272148C456D00E5D036 /* UIKit.framework */,
+				44EA8274148C456D00E5D036 /* Foundation.framework */,
+				44EA8276148C456D00E5D036 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44EA8278148C456D00E5D036 /* TangibleLearning */ = {
+			isa = PBXGroup;
+			children = (
+				44EA8281148C456D00E5D036 /* AppDelegate.h */,
+				44EA8282148C456D00E5D036 /* AppDelegate.m */,
+				44EA8284148C456D00E5D036 /* ViewController.h */,
+				44EA8285148C456D00E5D036 /* ViewController.m */,
+				44EA8287148C456D00E5D036 /* ViewController.xib */,
+				445BB6C514C641F800A4FB94 /* MyWindow.h */,
+				445BB6C614C641F800A4FB94 /* MyWindow.m */,
+				4485E9D914CE32D700EED9E4 /* RecordViewController.h */,
+				4485E9DA14CE32D700EED9E4 /* RecordViewController.m */,
+				4485E9DB14CE32D700EED9E4 /* RecordViewController.xib */,
+				44E8A9B014E4915B00095218 /* View */,
+				44EE519B1491A01500B05FAC /* TangibleRecognizer */,
+				44EA8279148C456D00E5D036 /* Supporting Files */,
+			);
+			path = TangibleLearning;
+			sourceTree = "<group>";
+		};
+		44EA8279148C456D00E5D036 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				44EA827A148C456D00E5D036 /* TangibleLearning-Info.plist */,
+				44EA827B148C456D00E5D036 /* InfoPlist.strings */,
+				44EA827E148C456D00E5D036 /* main.m */,
+				44EA8280148C456D00E5D036 /* TangibleLearning-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		44EE519B1491A01500B05FAC /* TangibleRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				44236EAC148C691600AF0328 /* TangibleObject.h */,
+				44236EAD148C691600AF0328 /* TangibleObject.mm */,
+				44E611E4148D6427007F3A15 /* TangibleRecognizer.h */,
+				44E611E5148D6427007F3A15 /* TangibleRecognizer.mm */,
+				442CB17B14954EEB009E1913 /* TRGraph.h */,
+				679758A514955DEE00D7D9AE /* TRGraph.cpp */,
+				442CB17C149587AF009E1913 /* TRMath.h */,
+				444F905514A01B230066DF16 /* TRTypes.h */,
+				444F9051149FFF0C0066DF16 /* TRRecognizer.h */,
+				444F904E149FFEFE0066DF16 /* TRRecognizer.cpp */,
+				444F905414A01A370066DF16 /* TRTouch.h */,
+				444F905214A01A2F0066DF16 /* TRTouch.cpp */,
+				44AC9FD614A16D000099EF6D /* TRDeclare.h */,
+			);
+			name = TangibleRecognizer;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44EA826D148C456D00E5D036 /* TangibleLearning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44EA828C148C456D00E5D036 /* Build configuration list for PBXNativeTarget "TangibleLearning" */;
+			buildPhases = (
+				44EA826A148C456D00E5D036 /* Sources */,
+				44EA826B148C456D00E5D036 /* Frameworks */,
+				44EA826C148C456D00E5D036 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TangibleLearning;
+			productName = TangibleLearning;
+			productReference = 44EA826E148C456D00E5D036 /* TangibleLearning.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44EA8265148C456D00E5D036 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 44EA8268148C456D00E5D036 /* Build configuration list for PBXProject "TangibleLearning" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 44EA8263148C456D00E5D036;
+			productRefGroup = 44EA826F148C456D00E5D036 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44EA826D148C456D00E5D036 /* TangibleLearning */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44EA826C148C456D00E5D036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44EA827D148C456D00E5D036 /* InfoPlist.strings in Resources */,
+				44EA8289148C456D00E5D036 /* ViewController.xib in Resources */,
+				4406B14D14906C990098E320 /* b.png in Resources */,
+				4406B14E14906C990098E320 /* paper.png in Resources */,
+				4406B14F14906C990098E320 /* d.png in Resources */,
+				44EE659314C4D63C00C4A903 /* Particle2.png in Resources */,
+				4485E9DD14CE32D700EED9E4 /* RecordViewController.xib in Resources */,
+				4466804814D1033B001879C3 /* Particle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44EA826A148C456D00E5D036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				442CB1821495A6FA009E1913 /* TRGraph.cpp in Sources */,
+				44236EAE148C691600AF0328 /* TangibleObject.mm in Sources */,
+				44EA827F148C456D00E5D036 /* main.m in Sources */,
+				44EA8283148C456D00E5D036 /* AppDelegate.m in Sources */,
+				44EA8286148C456D00E5D036 /* ViewController.m in Sources */,
+				44236EA6148C4A7100AF0328 /* LearningView.m in Sources */,
+				44E611DA148D61DC007F3A15 /* TangibleView.m in Sources */,
+				44E611E6148D6427007F3A15 /* TangibleRecognizer.mm in Sources */,
+				4406B1451490578D0098E320 /* SketchPaper.mm in Sources */,
+				444F904F149FFEFE0066DF16 /* TRRecognizer.cpp in Sources */,
+				444F905314A01A2F0066DF16 /* TRTouch.cpp in Sources */,
+				44EE658C14C4D16300C4A903 /* PaintingView.m in Sources */,
+				445BB6C714C641F800A4FB94 /* MyWindow.m in Sources */,
+				4485E9DC14CE32D700EED9E4 /* RecordViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44EA827B148C456D00E5D036 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44EA827C148C456D00E5D036 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44EA8287148C456D00E5D036 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44EA8288148C456D00E5D036 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44EA828A148C456D00E5D036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		44EA828B148C456D00E5D036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44EA828D148C456D00E5D036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TangibleLearning/TangibleLearning-Prefix.pch";
+				INFOPLIST_FILE = "TangibleLearning/TangibleLearning-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		44EA828E148C456D00E5D036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TangibleLearning/TangibleLearning-Prefix.pch";
+				INFOPLIST_FILE = "TangibleLearning/TangibleLearning-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44EA8268148C456D00E5D036 /* Build configuration list for PBXProject "TangibleLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44EA828A148C456D00E5D036 /* Debug */,
+				44EA828B148C456D00E5D036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44EA828C148C456D00E5D036 /* Build configuration list for PBXNativeTarget "TangibleLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44EA828D148C456D00E5D036 /* Debug */,
+				44EA828E148C456D00E5D036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44EA8265148C456D00E5D036 /* Project object */;
+}
