@@ -53,8 +53,6 @@ struct SketchPaperImpl {
 @synthesize penWidth,enterPoint,leavePoint, tangibleObject, drawUsingTagPoint, drawLine, enableButtons;
 @synthesize measurementLabel;
 @synthesize _measurement;
-@synthesize startLabel;
-@synthesize endLabel;
 
 -(id)initWithFrame:(CGRect)frame
 {
@@ -94,23 +92,11 @@ struct SketchPaperImpl {
         [undo addTarget:self action:@selector(undo) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:undo];
         
-        // add measurement button
+        // add measurement label
         measurementLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
-        measurementLabel.text = [NSString stringWithFormat:@"%u mm", _measurement];
+        measurementLabel.text = [NSString stringWithFormat:@"%u cm", _measurement];
         measurementLabel.textAlignment =  UITextAlignmentCenter;
         [self addSubview:measurementLabel];
-        
-        // start point label
-        startLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 400, 40)];
-        startLabel.text = [NSString stringWithFormat:@"%ix , %iy", 0,0];
-        startLabel.textAlignment =  UITextAlignmentCenter;
-        [self addSubview:startLabel];
-        
-        // end point label
-        endLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 400, 40)];
-        endLabel.text = [NSString stringWithFormat:@"%ix , %iy", 0,0];
-        endLabel.textAlignment =  UITextAlignmentCenter;
-        [self addSubview:endLabel];
         
     }
     return self;
@@ -134,6 +120,7 @@ struct SketchPaperImpl {
 #pragma mark - touches
 
 - (void)touchBegan:(UITouch *)touch beganPoint:(CGPoint)point event:(UIEvent *)event {
+    self._measurement = 0;
     if (_trackedTouch == touch) {
         return;
     }
@@ -150,7 +137,7 @@ struct SketchPaperImpl {
         _trans = self.tangibleObject.trans;
         for (int i = 0; i < [self.tangibleObject.outlinePoints count]; i++) {
             point[i] = [[self.tangibleObject.outlinePoints objectAtIndex:i] CGPointValue];
-            point[i] = CGPointApplyAffineTransform(point[i], _trans);
+            point[i] = CGPointApplyAffineTransform(point[i], _trans); 
         }
         
         if (self.tangibleObject.type == kTangibleTypeRuler) {    
@@ -165,16 +152,16 @@ struct SketchPaperImpl {
                 dis = distanceBetweenPoints(p, currentPoint);
                 if (dis < minDis) {
                     minDis = dis;
-                    pointOnLine = p;
+                    pointOnLine = p; 
                     line = i;
                 }
             }
-            if (minDis < 45) {
+            if (minDis < 45) { 
                 if (drawUsingTagPoint) {
                     enterPoint.hidden = NO;
-                    enterPoint.center = pointOnLine;
+                    enterPoint.center = pointOnLine; 
                 } else {
-                    self.previousLocation = pointOnLine;
+                    self.previousLocation = pointOnLine; 
                 }
                 drawLine = YES;
             }
@@ -191,7 +178,7 @@ struct SketchPaperImpl {
                     line = i;
                 }
             }
-            if (minDis < 45) {
+            if (minDis < 45) { 
                 if (drawUsingTagPoint) {
                     enterPoint.hidden = NO;
                     enterPoint.center = pointOnLine;
@@ -205,7 +192,7 @@ struct SketchPaperImpl {
             CGPoint p = [self closestPointOnSemicircle:point point:currentPoint onBounds:&b];
             if (b && distanceBetweenPoints(p, currentPoint) < 100) {
                 drawLine = YES;
-                self.previousLocation = p;
+                self.previousLocation = p; 
             }
         }
         
@@ -244,7 +231,7 @@ struct SketchPaperImpl {
                 leavePoint.center = p;
             } else {
                 [self renderLineFromPoint:self.previousLocation toPoint:p forTouch:touch];
-                self.previousLocation = p;
+                self.previousLocation = p; 
             }
         } else if (self.tangibleObject.type == kTangibleTypeSetsquare) {
             if (drawUsingTagPoint) {
@@ -255,7 +242,7 @@ struct SketchPaperImpl {
                 if (onbounds) {
                     p = p1;
                     [self renderLineFromPoint:self.previousLocation toPoint:p forTouch:touch];
-                    self.previousLocation = p;
+                    self.previousLocation = p; 
                 } else {
                     CGFloat dis = distanceBetweenPoints(p1, point[line]);
                     CGFloat dis2 = distanceBetweenPoints(p1, point[(line+1)%3]);
@@ -323,10 +310,11 @@ struct SketchPaperImpl {
     if (drawLine && self.tangibleObject && [touches containsObject:_trackedTouch]) {
         if (drawUsingTagPoint && !self.leavePoint.hidden) {
             if (self.tangibleObject.type == kTangibleTypeRuler) {
-                [self renderLineFromPoint:self.enterPoint.center toPoint:self.leavePoint.center forTouch:_trackedTouch];
+                [self renderLineFromPoint:self.enterPoint.center toPoint:self.leavePoint.center forTouch:_trackedTouch]; 
             } else if (self.tangibleObject.type == kTangibleTypeSetsquare) {
-                if (line == endLine)
-                    [self renderLineFromPoint:self.enterPoint.center toPoint:self.leavePoint.center forTouch:_trackedTouch];
+                if (line == endLine) {
+                    [self renderLineFromPoint:self.enterPoint.center toPoint:self.leavePoint.center forTouch:_trackedTouch]; 
+                }
                 else {
                     CGPoint point[3];
                     for (int i = 0; i < [self.tangibleObject.outlinePoints count]; i++) {
@@ -339,8 +327,8 @@ struct SketchPaperImpl {
                     } else {
                         midPoint = point[line];
                     }
-                    [self renderLineFromPoint:self.enterPoint.center toPoint:midPoint forTouch:_trackedTouch];
-                    [self renderLineFromPoint:midPoint toPoint:self.leavePoint.center forTouch:_trackedTouch];
+                    [self renderLineFromPoint:self.enterPoint.center toPoint:midPoint forTouch:_trackedTouch]; 
+                    [self renderLineFromPoint:midPoint toPoint:self.leavePoint.center forTouch:_trackedTouch]; 
                 }
                 
             }
@@ -354,7 +342,7 @@ struct SketchPaperImpl {
             CGPoint prevPoint = [touch previousLocationInView:self];
             int idx = i++ % colorCount;
             [self setBrushColorWithRed:colors[idx][0] green:colors[idx][1] blue:colors[idx][2]];
-            [self renderLineFromPoint:prevPoint toPoint:currentPoint forTouch:touch];
+            [self renderLineFromPoint:prevPoint toPoint:currentPoint forTouch:touch]; 
         }
     }
     
@@ -380,10 +368,9 @@ struct SketchPaperImpl {
         if (tid == _count && tid != oldcount)
             _impl->set.addPoint(tid, start);
         _impl->set.addPoint(tid, end);
-        _measurement = sqrt(pow(diffx, 2) + pow(diffy, 2)); 
-        self.measurementLabel.text = [NSString stringWithFormat:@"%u mm", _measurement];
-        self.startLabel.text = [NSString stringWithFormat:@"%i x, %i y", start.x, start.y];
-        self.endLabel.text = [NSString stringWithFormat:@"%i x, %i y", end.x, end.y];
+        // added measurement feature
+        _measurement += sqrt(pow(diffx, 2) + pow(diffy, 2))*0.1924*0.1; //measurement is in cm
+        self.measurementLabel.text = [NSString stringWithFormat:@"%4f cm", _measurement];
     }
 }
 
