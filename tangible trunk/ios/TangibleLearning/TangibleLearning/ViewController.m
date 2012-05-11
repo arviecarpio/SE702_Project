@@ -28,10 +28,13 @@ static NSMutableArray *tangibles;
 @synthesize labels;
 @synthesize positionButton;
 @synthesize instructionLabel;
+@synthesize measurementLabel;
+@synthesize _measurement;
 @synthesize _arrowButton;
 
 + (void)initialize {
     tangibles = [[NSMutableArray alloc] init];
+    
 }
 
 + (ViewController *)sharedController {
@@ -78,6 +81,7 @@ static NSMutableArray *tangibles;
     [self setLabels:nil];
     [self setPositionButton:nil];
     [self setInstructionLabel:nil];
+    [self setMeasurementLabel:nil];
     [self set_arrowButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -102,6 +106,7 @@ static NSMutableArray *tangibles;
     NSArray *pointArr = [view.touchPointArray copy];
     NSLog(@"%@", pointArr);
     self.instructionLabel.text = [NSString stringWithFormat:@"%@ [touches: %u]", self.instructionLabel.text, [pointArr count]];
+    self.measurementLabel.text = [NSString stringWithFormat:@"%@ [measurement: %u]", self.measurementLabel.text, _measurement];
     return pointArr;
 }
 
@@ -215,6 +220,7 @@ static NSMutableArray *tangibles;
         button.hidden = YES;
     }
     instructionLabel.text = @"";
+    measurementLabel.text = @"";
     
     // create and add tangible object
     TangibleObject *obj = [[TangibleObject alloc] initWithType:type points:_touchesArray outlinePoints:outlines];
@@ -232,6 +238,7 @@ static NSMutableArray *tangibles;
         view.left, view.bottom,
     };
     [instructionLabel setText:@"Select the corner with the right angle."];
+    [measurementLabel setText:@"Set square pressed."];
     
     // set up position buttons
     for (int i = 0; i <4; i++)
@@ -257,6 +264,7 @@ static NSMutableArray *tangibles;
         view.right, midy,
     };
     [instructionLabel setText:@"Select the base of the protractor."];
+    [measurementLabel setText:@"Protractor pressed."];
     
     // set up position buttons
     for (int i = 0; i <4; i++)
@@ -267,6 +275,7 @@ static NSMutableArray *tangibles;
         posButton.hidden = NO;
     }
     _touchesArray = [self touchesArray];
+    [measurementLabel setText:@"Protractor pressed."];
 }
 
 - (IBAction)circlePressed {

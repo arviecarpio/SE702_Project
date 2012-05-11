@@ -316,6 +316,7 @@
 	// Render the vertex array
 	glVertexPointer(2, GL_FLOAT, 0, vertexBuffer);
 	glDrawArrays(GL_POINTS, 0, vertexCount);
+    
 }
 
 // Reads previously recorded points and draws them onscreen. This is the Shake Me message that appears when the application launches.

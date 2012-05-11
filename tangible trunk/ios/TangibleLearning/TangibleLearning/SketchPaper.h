@@ -25,6 +25,7 @@ struct SketchPaperImpl;
     __unsafe_unretained UITouch *_trackedTouch;
     CGAffineTransform _trans;
     NSUInteger _enableButtonCount;
+    NSInteger _measurement;
 }
 
 @property CGFloat penWidth;
@@ -35,6 +36,10 @@ struct SketchPaperImpl;
 @property (nonatomic) BOOL drawUsingTagPoint;
 @property (readonly) BOOL drawLine;
 @property (readonly) BOOL enableButtons;
+@property (strong, nonatomic) IBOutlet UILabel *measurementLabel;
+@property (nonatomic) NSInteger _measurement;
+@property (strong, nonatomic) IBOutlet UILabel *startLabel;
+@property (strong, nonatomic) IBOutlet UILabel *endLabel;
 
 -(CGPoint) closestPointOnEdge:(CGPoint)edge_1 Withedge:(CGPoint)edge_2 touchPoint:(CGPoint)touch onBounds:(BOOL *)b;
 - (CGPoint)closestPointOnTriangle:(CGPoint[3])triangle point:(CGPoint)point;

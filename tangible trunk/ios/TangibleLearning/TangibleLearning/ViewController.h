@@ -36,7 +36,9 @@ enum {
 @property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *labels;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *positionButton;
 @property (strong, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *measurementLabel;
 @property (strong, nonatomic) IBOutlet UIButton *_arrowButton;
+@property (nonatomic) NSInteger _measurement;
 
 
 + (ViewController *)sharedController;

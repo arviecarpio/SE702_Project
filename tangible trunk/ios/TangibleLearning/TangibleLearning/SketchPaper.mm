@@ -51,6 +51,10 @@ struct SketchPaperImpl {
 @implementation SketchPaper
 
 @synthesize penWidth,enterPoint,leavePoint, tangibleObject, drawUsingTagPoint, drawLine, enableButtons;
+@synthesize measurementLabel;
+@synthesize _measurement;
+@synthesize startLabel;
+@synthesize endLabel;
 
 -(id)initWithFrame:(CGRect)frame
 {
@@ -89,6 +93,25 @@ struct SketchPaperImpl {
         undo.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [undo addTarget:self action:@selector(undo) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:undo];
+        
+        // add measurement button
+        measurementLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 40)];
+        measurementLabel.text = [NSString stringWithFormat:@"%u mm", _measurement];
+        measurementLabel.textAlignment =  UITextAlignmentCenter;
+        [self addSubview:measurementLabel];
+        
+        // start point label
+        startLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 400, 40)];
+        startLabel.text = [NSString stringWithFormat:@"%ix , %iy", 0,0];
+        startLabel.textAlignment =  UITextAlignmentCenter;
+        [self addSubview:startLabel];
+        
+        // end point label
+        endLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 400, 40)];
+        endLabel.text = [NSString stringWithFormat:@"%ix , %iy", 0,0];
+        endLabel.textAlignment =  UITextAlignmentCenter;
+        [self addSubview:endLabel];
+        
     }
     return self;
 }
@@ -348,6 +371,8 @@ struct SketchPaperImpl {
     CGRect bounds = self.bounds;
     start.y = bounds.size.height - start.y;
     end.y = bounds.size.height - end.y;
+    double diffx = end.x - start.x;
+    double diffy = end.y - start.y;
     [self renderLineFromPoint:start toPoint:end];
     if (touch) {
         NSUInteger oldcount = _count;
@@ -355,6 +380,10 @@ struct SketchPaperImpl {
         if (tid == _count && tid != oldcount)
             _impl->set.addPoint(tid, start);
         _impl->set.addPoint(tid, end);
+        _measurement = sqrt(pow(diffx, 2) + pow(diffy, 2)); 
+        self.measurementLabel.text = [NSString stringWithFormat:@"%u mm", _measurement];
+        self.startLabel.text = [NSString stringWithFormat:@"%i x, %i y", start.x, start.y];
+        self.endLabel.text = [NSString stringWithFormat:@"%i x, %i y", end.x, end.y];
     }
 }
 
